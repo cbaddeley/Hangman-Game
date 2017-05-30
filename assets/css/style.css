@@ -1,0 +1,70 @@
+body {
+	background-image: url("../images/congruent_pentagon.png");
+	font-family: 'Arimo', sans-serif;
+	font: #2C402F;
+}
+header {
+	background-color: #BFC7D9;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.header {
+	height: auto;
+	text-align: center;
+	padding: 10px;
+	margin: auto;
+	overflow: auto;
+}
+
+.container {
+	width: 960px;
+	background-color: #85A653;
+	height: auto;
+	margin: 30px auto;
+	border: 2px solid #52734D;
+}
+
+#container {
+	
+}
+
+#animalImg {
+	padding-top: 10px;
+	max-height: 400px;
+}
+
+#wordSection {
+	margin-top: 50px;
+
+}
+
+#score {
+	margin: 20px;
+	border: 1px solid #52734D;
+}
+ 
+#guesses {
+	border: 1px solid #52734D;
+	margin: 20px;
+}
+
+
+#game {
+	overflow: auto;
+}
+
+.tile {
+	height: 40px;
+	width: 40px;
+	margin-right: 10px;
+	background-color: #BFC7D9;
+	text-align: center;
+	font-size: 24px;
+	color: #2C402F;
+	padding-top: 5px;
+	display: inline-block;
+}
