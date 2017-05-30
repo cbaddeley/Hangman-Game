@@ -24,12 +24,14 @@ function makeTiles() {
 
 document.onkeyup = function(event) {
 	var guess = event.key;
-	for (var i = 0; selectedWord.length; i++) {
+	for (var i = 0; i < selectedWord.length; i++) {
 		if (guess == selectedWord[i]) {
-			console.log("ok");
+			var node = document.createTextNode(selectedWord[i]);
+			var element = document.getElementById("c" + i);
+			element.appendChild(node);
 		}
 	}
-}
+};
 
 makeTiles();
 
