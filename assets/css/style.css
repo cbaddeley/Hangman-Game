@@ -35,11 +35,13 @@ h1 {
 #animalImg {
 	padding-top: 10px;
 	max-height: 400px;
+	margin: 0 auto;
 }
 
 #wordSection {
+	
+	margin: 0 auto;
 	margin-top: 50px;
-
 }
 
 #score {
