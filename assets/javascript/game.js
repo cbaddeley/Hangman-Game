@@ -171,7 +171,7 @@ function initial() { //I wrapped all of this in this function to help with setti
 			finished(); //Game over fuction
 		}
 	}
-	$(document).on("click",function(){$('#dummy').focus();});
+	$("#wordSection").on("click",function(){$('#dummy').focus();});
 }
 
 
