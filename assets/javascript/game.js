@@ -21,7 +21,7 @@ var applause = new Audio('assets/sounds/applause.mp3');
 
 function startGame() { //This function is called when the button is clicked on the first screen
 	document.getElementById("buttonSpacer").style.display = "none"; //Removes the button
-	document.getElementById("container").style.visibility = "visible"; //Shows the game
+	document.getElementById("container").style.display = "block"; //Shows the game
 	makeTiles();
 	scoreCard();
 	initial();
