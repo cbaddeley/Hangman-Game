@@ -107,9 +107,8 @@ function finished() {
 		}
 			document.getElementById("window").style.display = "block";
 			document.getElementById("windowTitle").innerHTML = "Game Over!!";
-			document.getElementById("buttonSpan").innerHTML = "Click to Close Window!";
 			applause.play();
-			document.getElementById("windowButton").onclick = function() {window.close()};
+			document.getElementById("replaceButton").style.display = "none";
 
 		if (losses == 0) {
 			document.getElementById("windowImg").src = 'assets/images/george.jpg';
