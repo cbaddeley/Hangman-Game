@@ -106,14 +106,14 @@ button:hover {
 	bottom: 0;
 	right: 0;
 	width: 394px;
-	height: 226px;
+	height: 150px;
 	text-align: center;
 	background-color: rgba(172, 178, 156, 0.5);
 }
 
 #score p {
 	font-size: 28px;
-	margin-top: 35px;
+	padding-top: 17px;
 }
 
 .guesses {
@@ -124,27 +124,27 @@ button:hover {
 	bottom: 0;
 	left: 0;
 	width: 366px;
-	height: 226px;
+	height: 150px;
 	text-align: center;
 	background-color: rgba(172, 178, 156, 0.5);
 	z-index: 6;
 }
 
 #guesses {
-	height: 114px;
+	height: 74px;
 	font-size: 24px;
 
 }
 
 .guesses h2 {
-	padding: 10px 0;
+	padding: 5px 0;
 	font-size: 28px;
 }
 
 #game {
 	overflow: auto;
 	position: relative;
-	height: 332px;
+	height: 256px;
 }
 
 .clearTile {
@@ -157,7 +157,7 @@ button:hover {
 	height: 40px;
 	width: 40px;
 	background-color: #DAEDE2;
-	margin-top: 45px;
+	margin-top: 17px;
 }
 
 .tile {
@@ -172,11 +172,17 @@ button:hover {
 	vertical-align: middle;
 }
 
+#dummy{
+ position:absolute;
+ left:-200px;
+ top:0px;
+}
+
 #window {
 	position: relative;
 	width: 684px;
-	height: 299px;
-	margin: 20px auto;
+	height: 256px;
+	margin: 0 auto;
 	border: 2px solid #333745;
 	z-index: 10;
 	display: none;
@@ -187,9 +193,9 @@ button:hover {
 	position: absolute;
 	right: 0;
 	top: 0;
-	font-size: 48px;
-	margin: 50px auto;
-	width: 384px;
+	font-size: 36px;
+	margin: 10px auto;
+	width: 359px;
 	text-align: center;
 }
 
@@ -198,8 +204,8 @@ button:hover {
 	top: 0;
 	left: 0;
 	margin: 5px;
-	width: 300px;
-	height: 220px;
+	width: 315px;
+	height: 242px;
 }
 
 #buttonSpan {
@@ -208,18 +214,159 @@ button:hover {
 
 #imgDescription {
 	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 300px;
-	padding: 5px;
-	height: 69px;
+	right: 0;
+	top: 0;
+	width: 359px;
+	height: 152px;
+	margin-top: 64px;
+	padding: 0 29px;
 }
 
 #windowButton {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	margin: 10px 42px;
-	width: 300px;
+	margin: 10px 29px 10px 0;
+	width: 301px;
 }
 
+@media screen and (max-width: 760px) {
+	.container {
+		width: 600px;
+	}
+	#game {
+		height: auto;
+	}
+	#wordSection {
+		position: relative;
+		width: 100%;
+	}
+	.guesses {
+		position: relative;
+		width: 100%;
+	}
+	#score {
+		position: relative;
+		width: 100%;
+	}
+	#window {
+		position: absolute;
+		width: 550px;
+		margin: 25px;
+		height: 360px;
+	}
+	#windowTitle {
+		width: 100%;
+	}
+	#windowImg {
+		margin-top: 61px;
+		width: 265px;
+		height: 194px;
+	}
+	#imgDescription {
+		width: 265px;
+		padding: 0;
+		margin: 5px;
+		margin-top: 61px;
+	}
+	#windowButton {
+		width: 300px;
+		margin: 10px 125px 10px 125px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 550px;
+	}
+	#game {
+		height: auto;
+	}
+	#wordSection {
+		position: relative;
+		width: 100%;
+	}
+	.guesses {
+		position: relative;
+		width: 100%;
+	}
+	#score {
+		position: relative;
+		width: 100%;
+	}
+	h1 {
+		font-size: 36px;
+	}
+	#window {
+		position: absolute;
+		width: 500px;
+		margin: 25px;
+		height: 360px;
+	}
+	#windowTitle {
+		width: 100%;
+	}
+	#windowImg {
+		margin-top: 61px;
+		width: 265px;
+		height: 194px;
+	}
+	#imgDescription {
+		width: 215px;
+		padding: 0;
+		margin: 5px;
+		margin-top: 61px;
+	}
+	#windowButton {
+		width: 300px;
+		margin: 10px 100px 10px 100px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.container {
+		width: 530px;
+	}
+	#game {
+		height: auto;
+	}
+	#wordSection {
+		position: relative;
+		width: 100%;
+	}
+	.guesses {
+		position: relative;
+		width: 100%;
+	}
+	#score {
+		position: relative;
+		width: 100%;
+	}
+	h1 {
+		font-size: 36px;
+	}
+	#window {
+		position: absolute;
+		width: 480px;
+		margin: 25px;
+		height: 360px;
+	}
+	#windowTitle {
+		width: 100%;
+	}
+	#windowImg {
+		margin-top: 61px;
+		width: 265px;
+		height: 194px;
+	}
+	#imgDescription {
+		width: 195px;
+		padding: 0;
+		margin: 5px;
+		margin-top: 61px;
+	}
+	#windowButton {
+		width: 300px;
+		margin: 10px 90px 10px 90px;
+	}
+}
