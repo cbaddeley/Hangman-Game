@@ -62,12 +62,6 @@ button:hover {
 	margin: 30px auto;
 }
 
-img {
-	position: absolute;
-	left: -125px;
-	top: 30px;
-}
-
 #wordSection {
 	position: absolute;
 	top: 0;
@@ -150,7 +144,6 @@ img {
 	font-size: 24px;
 	padding-top: 5px;
 	display: inline-block;
-	vertical-align: middle;
 }
 
 #window {
