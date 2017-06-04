@@ -25,10 +25,8 @@ function startGame() { //This function is called when the button is clicked on t
 	makeTiles();
 	scoreCard();
 	initial();
-	$(document).on("click",function(){		
-    	$('#dummy').focus();	
-    });
- 	$('#dummy').focus();
+	$(document).on("click",function(){$('#dummy').focus();});
+	$('#dummy').focus();
 }
 
 function resetVars() { //This function changes all the global vars that need to go back to their original value. Otherwise
@@ -138,7 +136,7 @@ function finished() { //Needed this function to run if the user lost or won the 
 }
 
 function initial() { //I wrapped all of this in this function to help with setting onkeyup to null
-	(document.onkeyup = function(event) || { //starts with a key press
+	document.onkeyup = function(event) { //starts with a key press
 		var guess = event.key.toLowerCase(); //sets the char to a lower case
 		var guessBool = false; //local variable
 		var found = false; //local variable
