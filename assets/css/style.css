@@ -5,7 +5,7 @@
 #peeking {
 	position: fixed;
 	left: -300px;
-	top: 600px;
+	top: 1200px;
 	animation-name: rise;
 	animation-delay: 10s;
 	animation-duration: 30s;
