@@ -2,6 +2,31 @@
 	box-sizing: border-box;
 }
 
+#peeking {
+	position: fixed;
+	left: -300px;
+	top: 600px;
+	animation-name: rise;
+	animation-delay: 10s;
+	animation-duration: 15s;
+	animation-iteration-count: 2;
+}
+
+@keyframes rise {
+	0% {
+		top: 600px;
+	}
+	20% {
+		top: 300px;
+	}
+	40% {
+		top: 600px;
+	}
+	100% {
+		top: 600px;
+	}
+}
+
 body {
 	background-color: #F6F792;
 	font-family: 'Arimo', sans-serif;
