@@ -24,6 +24,7 @@ function startGame() {
 	document.getElementById("container").style.visibility = "visible";
 	makeTiles();
 	scoreCard();
+	initial();
 }
 
 function resetVars() { //This function changes all the global vars that need to go back to their original value. Otherwise
@@ -66,7 +67,9 @@ function zeroGuess() {
 				resetVars();
 				makeTiles();
 				scoreCard();
+				initial();
 			}
+			document.onkeyup = null;
 			document.getElementById("window").style.display = "block";
 			document.getElementById("windowImg").src = "assets/images/junglefire.jpg";
 			document.getElementById("windowTitle").innerHTML = "You Lost!!";
@@ -85,7 +88,9 @@ function win() {
 				resetVars();
 				makeTiles();
 				scoreCard();
+				initial();
 			}
+			document.onkeyup = null;
 			document.getElementById("window").style.display = "block";
 			document.getElementById("windowImg").src = animalArray[pickedWord][0];
 			document.getElementById("windowTitle").innerHTML = "You Won!!";
@@ -109,7 +114,6 @@ function finished() {
 			document.getElementById("windowTitle").innerHTML = "Game Over!!";
 			applause.play();
 			document.getElementById("replaceButton").style.display = "none";
-
 		if (losses == 0) {
 			document.getElementById("windowImg").src = 'assets/images/george.jpg';
 			document.getElementById("imgDescription").innerHTML = "Congratulations! You are the true jungle master.";
@@ -126,41 +130,43 @@ function finished() {
 	}
 }
 
-document.onkeyup = function(event) {
-	var guess = event.key.toLowerCase();
-	var guessBool = false;
-	var found = false;
-	if (/^[a-zA-Z]$/.test(guess)) {
-		for (var i = 0; i <= guesses.length; i++) {
-			if (guess == guesses[i]) {
-				guessBool = true;
-				break;
-			} 
-		}
-		if (!guessBool) {
-			guesses.push(guess);
-			for (var j = 0; j < selectedWord.length; j++) {
-				if (guess == selectedWord[j]) {
-					var node = document.createTextNode(selectedWord[j].toUpperCase());
-					var element = document.getElementById("c" + j);
-					element.appendChild(node)
-					found = true;
-					correctCount++;
+function initial() {
+	document.onkeyup = function(event) {
+		var guess = event.key.toLowerCase();
+		var guessBool = false;
+		var found = false;
+		if (/^[a-zA-Z]$/.test(guess)) {
+			for (var i = 0; i <= guesses.length; i++) {
+				if (guess == guesses[i]) {
+					guessBool = true;
+					break;
 				} 
 			}
-			if (!found) {
-				guessesLeft--;
-			} 
-		}
-		if (!found && !guessBool) {
-			//Here I add the guess to the "guesses" section of the html and increase wrong guesses in the HTML
-			document.getElementById("guesses").innerHTML += '<div class="clearTile">' + guess.toUpperCase() + '</div>';
-			document.getElementById("guessesLeft").innerHTML = guessesLeft;
-		}	
+			if (!guessBool) {
+				guesses.push(guess);
+				for (var j = 0; j < selectedWord.length; j++) {
+					if (guess == selectedWord[j]) {
+						var node = document.createTextNode(selectedWord[j].toUpperCase());
+						var element = document.getElementById("c" + j);
+						element.appendChild(node)
+						found = true;
+						correctCount++;
+					} 
+				}
+				if (!found) {
+					guessesLeft--;
+				} 
+			}
+			if (!found && !guessBool) {
+				//Here I add the guess to the "guesses" section of the html and increase wrong guesses in the HTML
+				document.getElementById("guesses").innerHTML += '<div class="clearTile">' + guess.toUpperCase() + '</div>';
+				document.getElementById("guessesLeft").innerHTML = guessesLeft;
+			}	
 
-		zeroGuess();
-		win();
-		finished();
+			zeroGuess();
+			win();
+			finished();
+		}
 	}
 }
 
