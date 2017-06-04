@@ -364,6 +364,97 @@ button:hover {
 	}
 }
 
+@media screen and (max-width: 360px) {
+	.container {
+		width: 320px;
+	}
+	#game {
+		height: auto;
+	}
+	#wordSection {
+		position: relative;
+		width: 100%;
+	}
+	.guesses {
+		position: relative;
+		width: 100%;
+	}
+	#score {
+		position: relative;
+		width: 100%;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	#window {
+		position: absolute;
+		width: 320px;
+		margin: 0;
+		height: 388px;
+	}
+	#windowTitle {
+		width: 100%;
+		position: relative;
+		margin: 2px auto;
+		font-size: 28px;
+	}
+	#windowImg {
+		margin: 0 10px;
+		width: 300px;
+		height: 220px;
+		position: relative;
+	}
+	#imgDescription {
+		width: 300px;
+		padding: 0;
+		margin: 5px 10px 0 10px;
+		position: relative;
+		height: 60px;
+		font-size: 12px;
+	}
+	#windowButton {
+		width: 300px;
+		margin: 5px;
+	}
+	.clearTile {
+	margin-right: 5px;
+	text-align: center;
+	font-size: 18px;
+	color: #EA2E49;
+	display: inline-block;
+	padding-top: 5px;
+	height: 30px;
+	width: 30px;
+	background-color: #DAEDE2;
+	margin-top: 17px;
+	}
+	.tile {
+	height: 30px;
+	width: 30px;
+	margin-right: 5px;
+	background-color: #DAEDE2;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	}
+	@keyframes rise {
+	0% {
+		top: 1200px;
+	}
+	20% {
+		top: 100px;
+	}
+	40% {
+		top: 1200px;
+	}
+	100% {
+		top: 1200px;
+	}
+}
+}
+
 @media screen and (max-width: 320px) {
 	.container {
 		width: 320px;
