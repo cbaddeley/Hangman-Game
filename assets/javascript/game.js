@@ -135,6 +135,7 @@ function finished() { //Needed this function to run if the user lost or won the 
 
 function initial() { //I wrapped all of this in this function to help with setting onkeyup to null
 	document.onkeyup = function(event) { //starts with a key press
+		if(event.keyCode==229){event.keyCode=$('#dummy').val().slice($('#dummy').val().length-1,$('#dummy').val().length).toUpperCase().charCodeAt(0);}
 		var guess = event.key.toLowerCase(); //sets the char to a lower case
 		var guessBool = false; //local variable
 		var found = false; //local variable
