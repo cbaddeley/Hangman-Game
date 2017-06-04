@@ -109,7 +109,7 @@ function finished() {
 			document.getElementById("windowTitle").innerHTML = "Game Over!!";
 			document.getElementById("buttonSpan").innerHTML = "Click to Close Window!";
 			applause.play();
-			document.getElementById("windowButton").onclick = function() {close()};
+			document.getElementById("windowButton").onclick = function() {window.close()};
 
 		if (losses == 0) {
 			document.getElementById("windowImg").src = 'assets/images/george.jpg';
