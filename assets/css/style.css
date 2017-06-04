@@ -445,4 +445,18 @@ button:hover {
 	display: inline-block;
 	vertical-align: middle;
 	}
+	@keyframes rise {
+	0% {
+		top: 1200px;
+	}
+	20% {
+		top: 100px;
+	}
+	40% {
+		top: 1200px;
+	}
+	100% {
+		top: 1200px;
+	}
+}
 }
