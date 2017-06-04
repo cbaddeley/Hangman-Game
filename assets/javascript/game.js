@@ -25,8 +25,6 @@ function startGame() { //This function is called when the button is clicked on t
 	makeTiles();
 	scoreCard();
 	initial();
-	$(document).on("click",function(){$('#dummy').focus();});
-	$('#dummy').focus();
 }
 
 function resetVars() { //This function changes all the global vars that need to go back to their original value. Otherwise
@@ -173,6 +171,7 @@ function initial() { //I wrapped all of this in this function to help with setti
 			finished(); //Game over fuction
 		}
 	}
+	$(document).on("click",function(){$('#dummy').focus();});
 }
 
 
