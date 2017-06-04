@@ -172,12 +172,6 @@ button:hover {
 	vertical-align: middle;
 }
 
-#dummy{
- position:absolute;
- left:-200px;
- top:0px;
-}
-
 #window {
 	position: relative;
 	width: 684px;

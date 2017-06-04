@@ -77,7 +77,6 @@ function zeroGuess() { //This is a loss function
 			fire.play();//Plays an audio file
 			animalArray.splice(pickedWord, 1);//This does to the animalArray what the selectWord function did to the wordBank. I had to do it after i already got the img, audio, and text
 			document.getElementById("windowButton").onclick = function() {localFunc()}; //If I put localFunc() by itself it would run automatically and the window wouldn't even pop up since it'd be reset immediately
-			document.activeElement.blur();
 	}
 }
 
@@ -99,7 +98,6 @@ function win() { //function if user correctly guesses word
 			animalArray[pickedWord][1].play();//plays the corresponding audio
 			animalArray.splice(pickedWord, 1);
 			document.getElementById("windowButton").onclick = function() {localFunc()};
-			document.activeElement.blur();
 	}
 }
 
@@ -111,7 +109,6 @@ function finished() { //Needed this function to run if the user lost or won the 
 		} else if (guessesLeft == 0) {
 			losses++;
 		}	
-			document.activeElement.blur();
 			document.getElementById("window").style.display = "block";
 			document.getElementById("windowTitle").innerHTML = "Game Over!!";
 			applause.play();
@@ -171,10 +168,6 @@ function initial() { //I wrapped all of this in this function to help with setti
 			finished(); //Game over fuction
 		}
 	}
-	$(document).on("click",function(){		
-   		$('#dummy').focus();	
-    });
-	$('#dummy').focus();
 }
 
 
