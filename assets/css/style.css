@@ -8,22 +8,22 @@
 	top: 600px;
 	animation-name: rise;
 	animation-delay: 10s;
-	animation-duration: 25s;
+	animation-duration: 30s;
 	animation-iteration-count: 2;
 }
 
 @keyframes rise {
 	0% {
-		top: 900px;
+		top: 1200px;
 	}
 	20% {
 		top: 300px;
 	}
 	40% {
-		top: 900px;
+		top: 1200px;
 	}
 	100% {
-		top: 900px;
+		top: 1200px;
 	}
 }
 
