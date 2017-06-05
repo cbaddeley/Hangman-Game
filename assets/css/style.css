@@ -114,27 +114,6 @@ button:hover {
 	margin-top: -14px;
 	margin-left: -28px;
 }
-.speech-bubble {
-	position: relative;
-	background: #8700bb;
-	border-radius: .4em;
-}
-
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 28px solid transparent;
-	border-right-color: #8700bb;
-	border-left: 0;
-	border-top: 0;
-	margin-top: -14px;
-	margin-left: -28px;
-}
-
 
 .header {
 	height: auto;
